@@ -19,5 +19,5 @@ export default function Joke() {
     }
 }, []);
 
-  return <h1>{joke}</h1>;
+  return <div><h1>Joke</h1><p>{joke}</p></div>;
 }
