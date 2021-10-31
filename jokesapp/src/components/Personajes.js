@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import md5  from "md5" ;
 import { CardPersonaje } from "./CardPersonaje";
+import { Carousel, Container } from 'react-bootstrap';
 import './Personajes.css';
 
 export default function Personajes() {
@@ -13,7 +14,8 @@ export default function Personajes() {
         if(localStorage.getItem("personajes") === null) {
             setPersonajes("Loading...")
         } else {
-            setPersonajes(localStorage.getItem("personajes"));
+            //Fue necesario parsearlo a string y de vuelta a json por que de lo contrario no leía a info que se guardaba de manera correcta
+            setPersonajes(JSON.parse(localStorage.getItem("personajes")));
         }}
     else {
       const ts = new Date().getTime().toString();
@@ -31,12 +33,14 @@ export default function Personajes() {
         });
     }
   }, []);
-  return <div className='cont'>
-  <div className='row'>
+  return (<>
+      <h1>Marvel characters</h1>
+  <div className="container">
+
     {personajes && personajes.map((element) => (
       <CardPersonaje
       name={element.name}
-        img={element.thumbnail.path}
+        img={element.thumbnail}
         des={element.description}
         comics={element.comics.returned}
         events={element.events.returned}
@@ -45,6 +49,5 @@ export default function Personajes() {
         date={element.modified}
         key={element.id}
       />))}
-  </div>
-</div>;
+  </div></>);
 }

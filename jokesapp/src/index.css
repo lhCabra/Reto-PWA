@@ -11,7 +11,39 @@ body {
       font-size: 3em;
       padding: 2em;
   }
-  
+  body .contenido {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+      color: rgb(0, 0, 0);
+      text-align:left;
+      display: grid;
+      align-items: center;
+      font-family: 'Montserrat';
+      font-size:x-large;
+  }
+  body .titulo {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+      color: rgb(0, 0, 0);
+      text-align:center;
+      display: grid;
+      align-items: center;
+      font-family: 'Montserrat';
+      font-size:xx-large;
+  }
+  body .fecha {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+      color: rgb(0, 0, 0);
+      text-align:center;
+      display: grid;
+      align-items: center;
+      font-family: 'Montserrat';
+      font-size:medium;
+  }
   body, html {
       height: calc(100% - 4em);
   }

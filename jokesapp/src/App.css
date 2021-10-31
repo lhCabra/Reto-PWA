@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  gap: 0.3125rem;
 }
 
 .App-logo {
@@ -35,4 +37,16 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.container {
+  display: flex;
+  gap: 0.3125rem;
+  margin-top: 1rem;
+  padding: 1.25rem;
+}
+.cont {
+  margin-top: 1rem;
+  padding: 2rem;
+
 }
